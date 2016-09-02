@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>XYZ-欢迎登录</title>
+    <link rel="stylesheet" type="text/css" href="https://miscssl.360buyimg.com/lib/skin/2013/base.css" media="all" />
+    <link type="text/css" rel="stylesheet"  href="https://miscssl.360buyimg.com/user/passport-2015/??/widget/common/common.css,/widget/login-form/login-form.css,/widget/login-banner/login-banner.css,/widget/safe-step/safe-step.css" source="widget"/>
+    <script type="text/javascript" src="https://miscssl.360buyimg.com/jdf/lib/jquery-1.6.4.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+	$(function(){
+    	if(!$('#autoLogin:checked').length){
+    		$('#autoLogin').prop("checked",'true').trigger("click").prop("checked",'true');	
+    	}
+		Util.Cookie.set("alpin","",-111);
+	});
+  </script>
+	  <script src="https://payrisk.jd.com/fp.html"></script>
+    <script src="/js/md5.js"></script>
+    <script src="/js/f.js"></script>
+    <script>
+        $(function(){
+            getJdEid(function(eid,fpid){
+                var eValue = eid;
+                var fpValue = fpid;
+                var ee = $("#eid").prop("value", eValue);
+                var fp = $("#sessionId").prop("value", fpValue);
+            });
+        });
+    </script>
+    <!-- SDK 登录 -->
+</body>
+</html>
